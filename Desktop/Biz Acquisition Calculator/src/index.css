@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-background text-gray-900;
+  }
+}
+
+@layer components {
+  .slider-track {
+    @apply h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer;
+  }
+  
+  .slider-thumb {
+    @apply appearance-none w-6 h-6 bg-white rounded-full shadow-lg cursor-pointer border-2 border-gray-300 hover:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500;
+  }
+  
+  .slider-thumb-green {
+    @apply appearance-none w-6 h-6 bg-white rounded-full shadow-lg cursor-pointer border-2 border-gray-300 hover:border-green-500 focus:outline-none focus:ring-2 focus:ring-green-500;
+  }
+  
+  .card {
+    @apply bg-white rounded-lg shadow-md p-6 border border-gray-200 hover:shadow-lg transition-shadow duration-200;
+  }
+  
+  .metric-card {
+    @apply bg-white rounded-lg shadow-md p-4 border-l-4;
+  }
+  
+  .metric-card.best-case {
+    @apply border-l-best-case;
+  }
+  
+  .metric-card.most-likely {
+    @apply border-l-most-likely;
+  }
+  
+  .metric-card.worst-case {
+    @apply border-l-worst-case;
+  }
+  
+  .metric-card.expected-value {
+    @apply border-l-expected-value;
+  }
+  
+  .bell-curve {
+    @apply w-full h-20 bg-gray-50 rounded border border-gray-200;
+  }
+  
+  .constraint-warning {
+    @apply text-warning text-sm font-medium flex items-center gap-1;
+  }
+  
+  .constraint-success {
+    @apply text-success text-sm font-medium flex items-center gap-1;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+} 
